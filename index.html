@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Finca Dorada - Salón de eventos en Mendoza. El lugar ideal para bodas, cumpleaños y celebraciones familiares.">
+    <title>Finca Dorada | Salón de Eventos</title>
+
+    <!-- Tipografías: Cormorant Garamond (cursiva elegante) + Lato (cuerpo limpio) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Lato:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="#" class="site-logo">Finca Dorada</a>
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="#contacto" class="header-cta">Consultar</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+            <div class="hero-bg">
+                <img src="fincadorada_-20230804_113020-3403704468.jpg"
+                    alt="Vista panorámica de Finca Dorada al atardecer">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <span class="hero-location">Mendoza, Argentina</span>
+                <h1 class="hero-title">Bienvenidos</h1>
+                <p class="hero-subtitle">El escenario perfecto para celebraciones que recordarás toda la vida</p>
+                <a href="https://wa.me/5492615551234?text=Hola,%20quiero%20consultar%20disponibilidad" target="_blank"
+                    class="btn btn-primary">Consultar Disponibilidad</a>
+            </div>
+        </section>
+
+        <!-- QUIÉNES SOMOS -->
+        <section id="nosotros" class="section bg-cream">
+            <div class="container">
+                <div class="content-centered">
+                    <span class="section-tag">Nuestra Historia</span>
+                    <h2>Un lugar pensado para vos y tu familia</h2>
+                    <div class="divider"></div>
+                    <p class="lead-text">
+                        Desde hace más de una década, Finca Dorada ha sido el hogar de cientos de celebraciones.
+                        Bodas llenas de emoción, cumpleaños de quince inolvidables, reuniones de amigos que se
+                        convierten en familia.
+                    </p>
+                    <p>
+                        Ubicados en las afueras de Mendoza, ofrecemos un entorno natural con todas las comodidades
+                        de un salón moderno. Amplios jardines, estacionamiento privado y un equipo que te acompaña
+                        en cada detalle.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE: Texto + Foto -->
+        <section class="section">
+            <div class="container">
+                <div class="split-block">
+                    <div class="split-text">
+                        <span class="section-tag">Nuestro Espacio</span>
+                        <h2>Un salón con carácter propio</h2>
+                        <p>
+                            El salón principal combina arquitectura moderna con detalles cálidos.
+                            Sus amplios ventanales permiten que la luz natural inunde el espacio durante el día,
+                            mientras que por la noche, nuestro sistema de iluminación crea la atmósfera perfecta.
+                        </p>
+                        <ul class="feature-list">
+                            <li>Capacidad para más de 200 invitados</li>
+                            <li>Pista de baile central</li>
+                            <li>Climatización completa</li>
+                            <li>Sonido e iluminación profesional</li>
+                        </ul>
+                    </div>
+                    <div class="split-image">
+                        <img src="fincadorada_-20250526_141714-1006832200.webp" alt="Fachada del salón Finca Dorada">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE: Foto + Texto (invertido) -->
+        <section class="section bg-cream">
+            <div class="container">
+                <div class="split-block reverse">
+                    <div class="split-text">
+                        <span class="section-tag">Gastronomía</span>
+                        <h2>El sabor de la tradición argentina</h2>
+                        <p>
+                            Trabajamos con parrilleros expertos que preparan el tradicional asado argentino
+                            a la llama, con cortes de primera calidad y el tiempo que cada pieza merece.
+                        </p>
+                        <p>
+                            También ofrecemos pastas caseras, opciones vegetarianas, platos para niños
+                            y una mesa dulce artesanal.
+                        </p>
+                    </div>
+                    <div class="split-image">
+                        <img src="fincadorada_-20250526_141959-2632035355.webp" alt="Asado tradicional argentino">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Lo que ofrecemos</span>
+                    <h2>Servicios para tu evento</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                <path d="M9 22V12h6v10" />
+                            </svg>
+                        </div>
+                        <h3>Salón y Jardines</h3>
+                        <p>Espacio cubierto para 200+ personas y amplios jardines iluminados.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 6v6l4 2" />
+                            </svg>
+                        </div>
+                        <h3>Organización Integral</h3>
+                        <p>Te asesoramos con proveedores y coordinamos el día de la fiesta.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                                <path d="M16 3.13a4 4 0 010 7.75" />
+                            </svg>
+                        </div>
+                        <h3>Ambiente Familiar</h3>
+                        <p>Un entorno seguro donde grandes y chicos disfrutan sin preocupaciones.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <h3>Fechas Flexibles</h3>
+                        <p>Disponibilidad para eventos de día o noche, entre semana o fines de semana.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOQUE: Detalle de mesas -->
+        <section class="section bg-cream">
+            <div class="container">
+                <div class="split-block">
+                    <div class="split-text">
+                        <span class="section-tag">El Detalle</span>
+                        <h2>Cada mesa, lista para celebrar</h2>
+                        <p>
+                            Nos ocupamos de que todo esté perfecto antes de que lleguen tus invitados.
+                            Mantelería impecable, cristalería reluciente, centros de mesa elegantes.
+                        </p>
+                        <a href="#contacto" class="btn btn-secondary">Agendar una visita</a>
+                    </div>
+                    <div class="split-image">
+                        <img src="fincadorada_-20250526_142213-882805989.webp" alt="Mesas elegantemente decoradas">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Contacto</span>
+                    <h2>Vení a conocernos</h2>
+                    <div class="divider"></div>
+                    <p>Agendá una visita sin compromiso. Te mostramos el salón y conversamos sobre tu evento.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <h4>Ubicación</h4>
+                            <p>Ruta Provincial 86, Km 12<br>Mendoza, Argentina</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Teléfono</h4>
+                            <p>+54 9 261 555-1234</p>
+                        </div>
+                        <div class="info-item">
+                            <h4>Email</h4>
+                            <p>info@fincadorada.com</p>
+                        </div>
+                        <a href="https://wa.me/5492615551234?text=Hola,%20me%20gustaría%20visitar%20Finca%20Dorada"
+                            target="_blank" class="btn btn-whatsapp">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
+                            Escribinos por WhatsApp
+                        </a>
+                    </div>
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.5!2d-68.85!3d-32.89!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDUzJzI0LjAiUyA2OMKwNTEnMDAuMCJX!5e0!3m2!1ses!2sar!4v1600000000000!5m2!1ses!2sar"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            title="Ubicación de Finca Dorada">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">Finca Dorada</span>
+                <p>El lugar donde los momentos se convierten en recuerdos.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Navegación</h5>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h5>Seguinos</h5>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 Finca Dorada. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

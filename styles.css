@@ -1,0 +1,790 @@
+/* =========================================
+   FINCA DORADA - ESTILO CLÁSICO ELEGANTE
+   =========================================
+   Tipografía cursiva predominante, paleta cálida, diseño sólido
+*/
+
+:root {
+    /* Colores */
+    --gold: #C9A227;
+    --gold-dark: #A68518;
+    --gold-light: #E8D59A;
+    --cream: #FAF7F2;
+    --cream-dark: #F0EAE0;
+    --text-dark: #3D3D3D;
+    --text-medium: #666666;
+    --text-light: #888888;
+    --white: #FFFFFF;
+    --border: #E8E4DC;
+
+    /* Tipografías */
+    --font-cursive: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Lato', 'Segoe UI', sans-serif;
+
+    /* Espaciado */
+    --section-spacing: 5rem;
+    --container-max: 1100px;
+    --radius: 4px;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-dark);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-cursive);
+    font-weight: 500;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-medium);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utilidades */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.bg-cream {
+    background-color: var(--cream);
+}
+
+.section {
+    padding: var(--section-spacing) 0;
+}
+
+.section-tag {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1.25rem auto;
+}
+
+.lead-text {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    max-width: 650px;
+    margin: 0 auto 1rem;
+}
+
+/* =========================================
+   BOTONES
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--gold);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--gold-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+}
+
+.btn-secondary:hover {
+    background: var(--gold);
+    color: var(--white);
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25D366;
+    color: var(--white);
+    padding: 0.9rem 1.5rem;
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* =========================================
+   HEADER - Transparente al inicio
+   ========================================= */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.site-header.scrolled {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    transition: height 0.3s ease;
+}
+
+.site-header.scrolled .header-inner {
+    height: 70px;
+}
+
+.site-logo {
+    font-family: var(--font-cursive);
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.site-header.scrolled .site-logo {
+    color: var(--text-dark);
+}
+
+.site-logo:hover {
+    color: var(--gold-light);
+}
+
+.site-header.scrolled .site-logo:hover {
+    color: var(--gold);
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-list a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.site-header.scrolled .nav-list a {
+    color: var(--text-medium);
+}
+
+.nav-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold-light);
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+.nav-list a:hover {
+    color: var(--white);
+}
+
+.site-header.scrolled .nav-list a:hover {
+    color: var(--gold);
+}
+
+.site-header.scrolled .nav-list a::after {
+    background: var(--gold);
+}
+
+.header-cta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: var(--white);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.site-header.scrolled .header-cta {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.header-cta:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 22px;
+    height: 2px;
+    background: var(--white);
+    transition: background 0.3s ease;
+}
+
+.site-header.scrolled .menu-toggle span {
+    background: var(--text-dark);
+}
+
+/* =========================================
+   HERO - Sin margen superior
+   ========================================= */
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Sin margin-top para que la navbar quede encima */
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.35) 0%,
+            rgba(0, 0, 0, 0.45) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    color: var(--white);
+    max-width: 700px;
+    padding: 0 1rem;
+}
+
+.hero-location {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold-light);
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-family: var(--font-cursive);
+    font-size: clamp(4.5rem, 14vw, 8rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================
+   SECCIONES DE CONTENIDO
+   ========================================= */
+.content-centered {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header p {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* Split Block (Texto + Imagen alternados) */
+.split-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.split-block.reverse .split-image {
+    order: -1;
+}
+
+.split-text h2 {
+    margin-bottom: 1.25rem;
+}
+
+.split-image img {
+    width: 100%;
+    border-radius: var(--radius);
+}
+
+.feature-list {
+    margin-top: 1.5rem;
+}
+
+.feature-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+    color: var(--text-medium);
+    border-bottom: 1px solid var(--border);
+}
+
+.feature-list li:last-child {
+    border-bottom: none;
+}
+
+.feature-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85rem;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+/* =========================================
+   SERVICIOS
+   ========================================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.service-card {
+    text-align: center;
+    padding: 2rem 1.25rem;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 1.25rem;
+    color: var(--gold);
+}
+
+.service-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.service-card h3 {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* =========================================
+   CONTACTO
+   ========================================= */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item h4 {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+}
+
+.info-item p {
+    margin: 0;
+    color: var(--text-medium);
+}
+
+.contact-map iframe {
+    border-radius: var(--radius);
+    width: 100%;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.site-footer {
+    background: var(--text-dark);
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 3.5rem;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    font-family: var(--font-cursive);
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--white);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    max-width: 280px;
+}
+
+.site-footer h5 {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.4rem;
+}
+
+.footer-links a,
+.footer-social a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: var(--gold-light);
+}
+
+.footer-social a {
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.footer-bottom {
+    padding: 1.25rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-spacing: 3.5rem;
+    }
+
+    .main-nav,
+    .header-cta {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 100vh;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .split-block {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .split-block.reverse .split-image {
+        order: 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+}
+
+/* =========================================
+   ANIMACIONES
+   ========================================= */
+
+/* Animación de entrada Hero */
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-location {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.hero-title {
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-subtitle {
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-content .btn {
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover suave en imágenes */
+.split-image {
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.split-image img {
+    transition: transform 0.6s ease;
+}
+
+.split-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Hover mejorado en tarjetas */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Efecto suave en botón WhatsApp */
+.btn-whatsapp:hover {
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25);
+}
+
+/* Línea dorada animada en divider */
+.divider {
+    position: relative;
+    overflow: hidden;
+}
+
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
