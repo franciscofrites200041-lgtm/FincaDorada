@@ -17,9 +17,9 @@
     --white: #FFFFFF;
     --border: #E8E4DC;
 
-    /* Tipografías */
-    --font-cursive: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'Lato', 'Segoe UI', sans-serif;
+    /* Tipografía unificada: Cormorant Garamond */
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Cormorant Garamond', Georgia, serif;
 
     /* Espaciado */
     --section-spacing: 5rem;
@@ -43,29 +43,36 @@ html {
 body {
     font-family: var(--font-body);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
+    /* Cormorant se ve mejor un poco más grande */
     color: var(--text-dark);
     background: var(--white);
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 h1,
 h2,
 h3 {
-    font-family: var(--font-cursive);
+    font-family: var(--font-display);
     font-weight: 500;
     color: var(--text-dark);
     line-height: 1.2;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+h3 {
+    font-size: 1.4rem;
     font-style: italic;
 }
 
 p {
     margin-bottom: 1rem;
     color: var(--text-medium);
+    font-weight: 400;
 }
 
 a {
@@ -211,7 +218,7 @@ img {
 }
 
 .site-logo {
-    font-family: var(--font-cursive);
+    font-family: var(--font-display);
     font-size: 1.7rem;
     font-weight: 500;
     font-style: italic;
@@ -370,7 +377,7 @@ img {
 }
 
 .hero-title {
-    font-family: var(--font-cursive);
+    font-family: var(--font-display);
     font-size: clamp(4.5rem, 14vw, 8rem);
     font-weight: 400;
     font-style: italic;
@@ -559,7 +566,7 @@ img {
 }
 
 .footer-logo {
-    font-family: var(--font-cursive);
+    font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 500;
     font-style: italic;
@@ -611,8 +618,10 @@ img {
 }
 
 /* =========================================
-   RESPONSIVE
+   RESPONSIVE - Optimizado para móviles
    ========================================= */
+
+/* Tablets */
 @media (max-width: 992px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -625,13 +634,33 @@ img {
     .footer-inner {
         grid-template-columns: 1fr 1fr;
     }
+
+    .hero-title {
+        font-size: 5rem;
+    }
 }
 
+/* Móviles */
 @media (max-width: 768px) {
     :root {
-        --section-spacing: 3.5rem;
+        --section-spacing: 3rem;
     }
 
+    /* Tipografía más grande para móvil */
+    body {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Navegación móvil */
     .main-nav,
     .header-cta {
         display: none;
@@ -639,36 +668,177 @@ img {
 
     .menu-toggle {
         display: flex;
+        padding: 10px;
+        /* Área táctil más grande */
     }
 
+    .header-inner {
+        height: 60px;
+    }
+
+    .site-logo {
+        font-size: 1.4rem;
+    }
+
+    /* Hero optimizado para móvil */
     .hero {
         min-height: 100vh;
+        min-height: 100dvh;
+        /* Dynamic viewport height para móviles */
     }
 
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
+        margin-bottom: 1rem;
     }
 
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+    }
+
+    .hero-location {
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+    }
+
+    .hero-content {
+        padding: 0 1.25rem;
+    }
+
+    /* Botones táctiles más grandes */
+    .btn {
+        padding: 1rem 2rem;
+        font-size: 0.95rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .btn-whatsapp {
+        padding: 1rem 1.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Secciones */
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .content-centered {
+        text-align: left;
+    }
+
+    .divider {
+        margin: 1rem 0 1rem 0;
+    }
+
+    .content-centered .divider {
+        margin-left: 0;
+    }
+
+    /* Bloques de contenido */
     .split-block {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .split-block.reverse .split-image {
         order: 0;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
+    .split-text h2 {
+        font-size: 1.6rem;
     }
 
+    .feature-list li {
+        padding: 0.75rem 0;
+        padding-left: 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    /* Servicios */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+        text-align: left;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .service-card .service-icon {
+        margin: 0;
+        width: 35px;
+        height: 35px;
+        flex-shrink: 0;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    /* Contacto */
+    .contact-info {
+        gap: 1.25rem;
+    }
+
+    .info-item h4 {
+        font-size: 0.7rem;
+    }
+
+    .contact-map iframe {
+        height: 280px;
+    }
+
+    /* Footer */
     .footer-inner {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
     }
 
     .footer-brand p {
         max-width: 100%;
+    }
+
+    .site-footer {
+        padding-top: 2.5rem;
+    }
+
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
 
